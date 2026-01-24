@@ -13,7 +13,7 @@ const LandingCloud = () => {
         { title: 'Raycast' },
     ]
   return (
-    <section className='mt-4'>
+    <section className='mt-4 py-10'>
         <h2 className='max-w-2xl mx-auto text-lg text-neutral-600 dark:text:400 text-center font-medium'>Trusted by modern operators across industries. <br /><span className='text-neutral-400'>From pilot to scale without chaos.</span></h2>
         <div className='grid grid-cols-2 md:grid-cols-3 max-w-3xl mx-auto mt-10'>
             {logos.map((logo, index) => (
