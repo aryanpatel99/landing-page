@@ -4,6 +4,10 @@ import Heading from '../Heading'
 import SubHeading from '../Subheading'
 import { Card, CardContent, CardCTA, CardSkeleton, CardTitle } from './card'
 import { IconPlus } from '@tabler/icons-react'
+import { SkeletonOne } from './skeletons/first'
+import {SkeletonThree} from './skeletons/third'
+
+
 
 const Features = () => {
     return (
@@ -18,7 +22,9 @@ const Features = () => {
         </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 my-10 md:my-20">
                  <Card className='rounded-bl-3xl rounded-tl-3xl'>
-                    <CardSkeleton/>
+                    <CardSkeleton>
+                    <SkeletonOne/>
+                    </CardSkeleton>
                     <CardContent>
                     <CardTitle>Prebuilt Agents, Tuned to Your Workflows</CardTitle>
                     <CardCTA>
@@ -36,7 +42,9 @@ const Features = () => {
                     </CardContent>
                  </Card>
                 <Card className='rounded-br-3xl rounded-tr-3xl'>
-                    <CardSkeleton/>
+                    <CardSkeleton>
+                    <SkeletonThree/>
+                    </CardSkeleton>
                     <CardContent>
                     <CardTitle>Approvals, Guardrails, and Full Auditability</CardTitle>
                     <CardCTA>
