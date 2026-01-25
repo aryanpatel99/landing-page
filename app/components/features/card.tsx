@@ -9,7 +9,7 @@ export const Card = ({
     children: React.ReactNode
 }) => {
   return (
-    <div className={cn(" bg-neutral-50 dark:bg-neutral-800 rounded-lg")}>{children} </div>
+    <div className={cn(" max-w-l mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-lg")}>{children} </div>
   )
 }
 
@@ -60,7 +60,7 @@ export const CardSkeleton = ({
     children? : React.ReactNode
 }) => {
     return (
-        <div className={cn('relative h-40 md:h-80 overflow-hidden perspective-distant') }>
+        <div className={cn('relative h-40 sm:h-60 md:h-80 overflow-hidden perspective-distant',className) }>
             {/* <div className="absolute inset-0 h-full w-full z-40 bg-white"></div> */}
             {children}
         </div>

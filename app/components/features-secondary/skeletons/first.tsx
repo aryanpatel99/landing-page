@@ -1,0 +1,61 @@
+"use client"
+
+import { FileIcon, HubspotIcon, SalesForceIcon, SettingsIcon, SheetIcon } from "@/icons"
+import { motion } from "motion/react"
+
+export const SkeletonOne = ()=>{
+    return (
+        <div className='flex-1 rounded-t-3xl bg-neutral-100 border space-y-2 border-neutral-200 max-w-sm mx-auto w-full h-full absolute inset-x-0 p-2'>
+            <Card topIcon={<FileIcon className="size-4 text-white"/>} title="Connect Data" desc="Link CRMs, helpdesks, and APIs to give agents secure, role-based access." tags={[{text: 'SalesForce', icon: <SalesForceIcon className="size-3"/>}, {text: 'Hubspot', icon: <HubspotIcon className="size-3"/>}, {text: 'Sheet', icon: <SheetIcon className="size-3"/>}]}/> 
+
+            <Card topIcon={<SettingsIcon className="size-4"/>} title="Connect Data" desc="Create workflows, decision points, and conditional actions for each task." tags={[{text: 'SalesForce', icon: <SalesForceIcon className="size-3"/>}, {text: 'Hubspot', icon: <HubspotIcon className="size-3"/>}, {text: 'Sheet', icon: <SheetIcon className="size-3"/>}]}/> 
+
+            <Card topIcon={<FileIcon className="size-4 text-white"/>} title="Human-in-the-Loop" desc="Add reviews, approvals and escalations without slowing work." tags={[{text: 'SalesForce', icon: <SalesForceIcon className="size-3"/>}, {text: 'Hubspot', icon: <HubspotIcon className="size-3"/>}, {text: 'Sheet', icon: <SheetIcon className="size-3"/>}]}/> 
+        </div>
+    )
+}
+
+export const Card = ({topIcon,title,desc,tags}:{
+    topIcon: React.ReactNode,
+    title: string,
+    desc: string,
+    tags: {text: string, icon: React.ReactNode}[]
+})=>{
+
+    const randomColorVars = ['--color-blue-500', '--color-green-500', '--color-red-500', '--color-yellow-500'];
+
+    return (
+        <div className="p-4 shadow-black/10 border border-transparent rounded-[15px] bg-white flex items-start  gap-4 ring-1 ring-black/10">
+            <div
+            style={{backgroundColor:`var(${randomColorVars[Math.floor(Math.random()*randomColorVars.length)]})`}}
+            
+             className="size-6 shrink-0 rounded-full bg-blue-500 mt-1 flex items-center justify-center">
+                {/* <FileIcon className="size-4"/> */}
+                {topIcon}
+            </div>
+            <div>
+                <p className="text-lg font-bold text-neutral-800">{title}</p>
+                <p className="text-base text-neutral-500">{desc}</p>
+                <div className="mt-2 flex flex-row flex-wrap gap-2">
+
+                    {tags.map((tag,idx)=>(
+                        <Tag key={idx} text={tag.text} icon={tag.icon}/>
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+export const Tag = ({text,icon}:{
+    text: string,
+    icon: React.ReactNode
+})=>{
+    return(
+        <div className="flex items-center gap-1 px-1 py-0.5 border border-neutral-200 rounded-sm text-sm">
+            {icon}
+            <p className="text-xs text-neutral-500">{text}</p>
+        </div>
+    )
+}
