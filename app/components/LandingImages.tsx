@@ -34,7 +34,7 @@ const LandingImages = () => {
         //     </motion.div>
         // </div>
 
-        <div className='relative min-h-200 pt-15 py-10 overflow-hidden mask-b-from-50%'>
+        <div className='relative min-h-fit pt-15 py-10 overflow-hidden mask-b-from-80%'>
             <img  src="./dashboard@3x.webp" alt="dashboardImg" />
             {/* <img className={cn('absolute inset-0 rounded-md mask-r-from-30% mask-b-from-30%  translate-x-30 translate-y-30 shadow')} src="./dashboard@3x.webp" alt="dashboardImg" /> */}
         </div>
