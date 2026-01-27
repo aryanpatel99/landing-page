@@ -7,11 +7,11 @@ import LandingImages from './LandingImages'
 
 const Speed = () => {
   return (
-    <Container className='py-10 md:py-20 lg:py-10'>
-        
-        <Heading as='h2' className='mb-4'>Built for Speed<br />Designed for Scale</Heading>
-            <SubHeading className='py-5'>Deploy AI agents that plan, act through your tools, and report outcomes—without changing how your teams work.</SubHeading>
-            <LandingImages/>
+    <Container className='py-10 md:py-20 lg:py-10 px-3 xl:px-0'>
+
+      <Heading as='h2' className='mb-4'>Built for Speed<br />Designed for Scale</Heading>
+      <SubHeading className='py-5'>Deploy AI agents that plan, act through your tools, and report outcomes—without changing how your teams work.</SubHeading>
+      <LandingImages />
     </Container>
   )
 }
