@@ -4,16 +4,18 @@ import Hero from "./components/Hero";
 import LandingCloud from "./components/LandingCloud";
 import Features from "./components/features";
 import Speed from "./components/speed";
-import {FeaturesSecondary} from "./components/features-secondary/features-secondary";
+import { FeaturesSecondary } from "./components/features-secondary/features-secondary";
+import {FAQS} from "./components/faq";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Hero/>
-      <LandingCloud/>
-      <Features/>
-      <Speed/>
-      <FeaturesSecondary/>
+      <Hero />
+      <LandingCloud />
+      <Features />
+      <Speed />
+      <FeaturesSecondary />
+      <FAQS/>
     </div>
   )
 }
