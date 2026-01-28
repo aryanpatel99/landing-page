@@ -81,7 +81,7 @@ export const SkeletonCard = ({ icon, title, desc, badge, className }: {
             <p className='text-sm font-normal'>{title}</p>
             {badge}
         </div>
-        <p className='text-sm text-neutral-400 dark:text-neutral-400 font-medium mt-3'>{desc}</p>
+        <p className='text-sm text-neutral-500 dark:text-neutral-400 font-light mt-3'>{desc}</p>
         <div className="flex items-center gap-2 mt-3">
             <Tag text='Google Ads' />
             <Tag text='SaaS' />
