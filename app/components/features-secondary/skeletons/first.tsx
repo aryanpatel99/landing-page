@@ -11,12 +11,7 @@ export const SkeletonOne = () => {
 
     ]
     return (
-        <div className='flex-1 rounded-t-3xl bg-neutral-100 border space-y-2 border-neutral-200 max-w-sm mx-auto w-full h-full absolute inset-x-0 p-2'>
-            {/* <Card topIcon={<FileIcon className="size-4 text-white" />} title="Connect Data" desc="Link CRMs, helpdesks, and APIs to give agents secure, role-based access." tags={[{ text: 'SalesForce', icon: <SalesForceIcon className="size-3" /> }, { text: 'Hubspot', icon: <HubspotIcon className="size-3" /> }, { text: 'Sheet', icon: <SheetIcon className="size-3" /> }]} />
-
-            <Card topIcon={<SettingsIcon className="size-4" />} title="Connect Data" desc="Create workflows, decision points, and conditional actions for each task." tags={[{ text: 'SalesForce', icon: <SalesForceIcon className="size-3" /> }, { text: 'Hubspot', icon: <HubspotIcon className="size-3" /> }, { text: 'Sheet', icon: <SheetIcon className="size-3" /> }]} />
-
-            <Card topIcon={<FileIcon className="size-4 text-white" />} title="Human-in-the-Loop" desc="Add reviews, approvals and escalations without slowing work." tags={[{ text: 'SalesForce', icon: <SalesForceIcon className="size-3" /> }, { text: 'Hubspot', icon: <HubspotIcon className="size-3" /> }, { text: 'Sheet', icon: <SheetIcon className="size-3" /> }]} /> */}
+        <div className='flex-1 rounded-t-3xl bg-neutral-100 dark:bg-neutral-900 dark:border-neutral-700 border space-y-2 border-neutral-200 max-w-sm mx-auto w-full h-full absolute inset-x-0 p-2'>
             {items.map((item,idx)=>(
                 <Card key={idx} topIcon={item.topIcon} title={item.title} desc={item.desc} tags={item.tags}/>
             ))}
@@ -38,7 +33,7 @@ export const Card = ({ topIcon, title, desc, tags }: {
         initial={{ opacity: 0,y:-10 ,scale:0.8 }}
         animate={{ opacity: 1,y:0,scale:1 }}
         transition={{ duration: 0.3 , ease: 'easeOut' }}
-        className="p-4 shadow-black/10 border border-transparent rounded-[15px] bg-white flex items-start  gap-4 ring-1 ring-black/10">
+        className="p-4 shadow-black/10 border border-transparent rounded-[15px] bg-white dark:bg-neutral-800 flex items-start  gap-4 ring-1 ring-black/10">
             <div
                 style={{ backgroundColor: `var(${randomColorVars[Math.floor(Math.random() * randomColorVars.length)]})` }}
 
@@ -47,8 +42,8 @@ export const Card = ({ topIcon, title, desc, tags }: {
                 {topIcon}
             </div>
             <div>
-                <p className="text-lg font-bold text-neutral-800">{title}</p>
-                <p className="text-base text-neutral-500">{desc}</p>
+                <p className="text-lg font-bold text-neutral-800 dark:text-neutral-100">{title}</p>
+                <p className="text-base text-neutral-500 dark:text-neutral-400">{desc}</p>
                 <div className="mt-2 flex flex-row flex-wrap gap-2">
 
                     {tags.map((tag, idx) => (
@@ -66,9 +61,9 @@ export const Tag = ({ text, icon }: {
     icon: React.ReactNode
 }) => {
     return (
-        <div className="flex items-center gap-1 px-1 py-0.5 border border-neutral-200 rounded-sm text-sm">
+        <div className="flex items-center gap-1 px-1 py-0.5 border border-neutral-200 dark:border-neutral-600 rounded-sm text-sm">
             {icon}
-            <p className="text-xs text-neutral-500">{text}</p>
+            <p className="text-xs text-neutral-500 dark:text-neutral-400">{text}</p>
         </div>
     )
 }

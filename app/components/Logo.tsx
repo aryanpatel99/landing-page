@@ -8,7 +8,7 @@ const Logo = ({className}:{
   return (
     <Link href={"/"} className={cn('flex items-center gap-1', className)}>
     <LogoIcon/>
-    <span className='text-sm text-neutral-600'>Agent Force</span>
+    <span className='text-sm text-neutral-600 dark:text-white'>Agent Force</span>
     </Link>
   )
 }

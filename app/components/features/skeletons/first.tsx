@@ -64,7 +64,7 @@ export const Tag = ({ text }: {
     text: string
 }) => {
     return (<div className='px-2 py-1 text-xs rounded-sm  bg-neutral-200 dark:bg-neutral-700 w-fit'>
-        <span className='text-xs font-bold'>{text}</span>
+        <span className='text-xs font-semibold'>{text}</span>
     </div>)
 }
 
@@ -75,7 +75,7 @@ export const SkeletonCard = ({ icon, title, desc, badge, className }: {
     badge: React.ReactNode,
     className: string
 }) => {
-    return (<div className={cn('max-w-[85%] h-fit my-auto bg-neutral-100 mx-auto w-full p-3 rounded-xl border border-neutral-300 dark:border-neutral-700 shadow-2xl ', className)}>
+    return (<div className={cn('max-w-[85%] h-fit my-auto bg-neutral-100 dark:bg-neutral-900 mx-auto w-full p-3 rounded-xl border border-neutral-300 dark:border-neutral-700 shadow-2xl ', className)}>
         <div className="flex gap-3 items-center ">
             {icon}
             <p className='text-sm font-normal'>{title}</p>
@@ -96,9 +96,9 @@ export const Badge = ({ variant, text }: {
     text: string
 }) => {
     return (<div className={cn('px-1 py-1 rounded-full flex items-center gap-1 w-fit',
-        variant === 'danger' && 'bg-red-100 text-red-800 border   border-red-300 dark:border-red-800',
-        variant === 'success' && 'bg-green-100 text-green-800 border border-green-300 dark:border-green-800',
-        variant === 'warning' && 'bg-yellow-100 text-yellow-800 border border-yellow-300 dark:border-yellow-800',
+        variant === 'danger' && 'bg-red-100 dark:bg-red-500/10 text-red-500 dark:text-red-500 border   border-red-300 dark:border-red-300',
+        variant === 'success' && 'bg-green-100 dark:bg-green-500/10 text-green-500 dark:text-green-500 border border-green-300 dark:border-green-300',
+        variant === 'warning' && 'bg-yellow-100 dark:bg-yellow-500/10 text-yellow-500 dark:text-yellow-500 border border-yellow-300 dark:border-yellow-300',
     )}>
         <IconClock className={cn('size-4')} />
         <IconRipple className={cn('size-4')} />

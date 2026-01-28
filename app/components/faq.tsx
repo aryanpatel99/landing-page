@@ -53,12 +53,12 @@ export const FAQS = () => {
 export const Question = ({ question, answer }: { question: string, answer: string }) => {
     const [open, setOpen] = React.useState(false)
     return (
-        <button onClick={() => setOpen(!open)} className='w-full rounded-3xl overflow-hidden bg-neutral-100 p-4 md:p-8'>
+        <button onClick={() => setOpen(!open)} className='w-full rounded-3xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 p-4 md:p-8'>
             <div className='flex items-center justify-between '>
                 <h3 className='text-lg md:text-2xl font-bold font-display'>{question}</h3>
-                <div className='relative size-6 rounded-full bg-black flex items-center justify-center'>
-                    <IconMinus className={cn('size-6 text-white absolute inset-0 transition-all duration-200 ease-in-out', open && "scale-90 rotate-90 ease-in-out")} />
-                    <IconPlus className={cn('size-6 text-white absolute inset-0 scale-0 -rotate-90 transition-all duration-200 ease-in-out', open && "scale-100 rotate-0 ease-in-out")} />
+                <div className='relative size-6 rounded-full bg-black dark:bg-white flex items-center justify-center'>
+                    <IconMinus className={cn('size-6 text-white dark:text-black absolute inset-0 transition-all duration-200 ease-in-out', open && "scale-90 rotate-90 ease-in-out")} />
+                    <IconPlus className={cn('size-6 text-white dark:text-black absolute inset-0 scale-0 -rotate-90 transition-all duration-200 ease-in-out', open && "scale-100 rotate-0 ease-in-out")} />
                 </div>
             </div>
             {open && <motion.p
@@ -71,7 +71,7 @@ export const Question = ({ question, answer }: { question: string, answer: strin
                     duration: 0.2,
                     ease: "easeInOut"
                 }}
-                className='text-start mt-4 text-neutral-600 dark:text-neutral-400 '>{answer}</motion.p>}
+                className='text-start mt-4 text-neutral-600 dark:text-neutral-300 '>{answer}</motion.p>}
 
         </button>
 

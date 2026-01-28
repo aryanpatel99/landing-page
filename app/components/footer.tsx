@@ -5,6 +5,7 @@ import SubHeading from './Subheading'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { IconSend } from '@tabler/icons-react'
+import ModeToggle from './mode-toggle'
 
 const Footer = () => {
 
@@ -90,9 +91,9 @@ const Footer = () => {
 
                 <div className='col-span-2 md:col-span-1 flex flex-col gap-4 px-2'>
                     <h4 className='text-base font-bold text-neutral-400 dark:text-neutral-100 font-display'>Newsletter</h4>
-                    <div className='border border-neutral-100 p-px bg-neutral-100 rounded-md flex items-center justify-center '>
+                    <div className='border border-neutral-100 p-px bg-neutral-100  rounded-md flex items-center justify-center '>
                         <input autoComplete='email' type="text" placeholder='Your email' className='min-w-0 flex-1 bg-transparent outline-none px-2 py-2 text-neutral-700 dark:text-neutral-400 placeholder:text-neutral-400 dark:placeholder:text-neutral-600 font-display text-sm' />
-                        <Button className='shrink-0 h-9 w-9 p-0 rounded-sm active:scale-95 transition-all duration-200 ease-in-out'><IconSend className='text-white' size={20} /></Button>
+                        <Button className='shrink-0 h-9 w-9 p-0 rounded-sm active:scale-95 dark:bg-neutral-800 dark:hover:bg-neutral-700 transition-all duration-200 ease-in-out'><IconSend className='text-white' size={20} /></Button>
                     </div>
                     <p className='text-sm text-neutral-600 dark:text-neutral-400 font-display'>Get the latest product news and behind the scenes updates.</p>
                 </div>
@@ -101,9 +102,14 @@ const Footer = () => {
 
             <Container className='flex flex-col sm:flex-row items-center justify-between mt-10 relative z-20'>
                 <p className='text-sm text-neutral-600 dark:text-neutral-400 font-display'>&copy; {new Date().getFullYear()} Agenforce AI. All rights reserved.</p>
-                <div className='flex items-center gap-4'>
+                <div className='flex items-center flex-col gap-4'>
+                    <div className="flex items-center gap-2">
                     <Link href="#" className='text-neutral-700 text-sm font-display dark:text-neutral-400 hover:text-black dark:hover:text-neutral-100 transition-colors duration-200 ease-in-out'>Privacy Policy</Link>
                     <Link href="#" className='text-neutral-700 text-sm font-display dark:text-neutral-400 hover:text-black dark:hover:text-neutral-100 transition-colors duration-200 ease-in-out'>Terms of Service</Link>
+                    </div>
+                <div className="flex">
+                    <ModeToggle/>
+                </div>
                 </div>
             </Container>
 
