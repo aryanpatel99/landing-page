@@ -38,9 +38,9 @@ export const MobileNavbar = () => {
             <Logo />
             <button onClick={() => setOpen(!open)}><LayoutSidebarRightIcon size={20} /></button>
             <AnimatePresence>
-                {open && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, backdropFilter: "blur(10px)" }} exit={{ opacity: 0, backdropFilter: "blur(0px)" }} transition={{ duration: 0.2 }} className='fixed inset-0 h-full w-full bg-white z-50 px-4 py-2'>
+                {open && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1, backdropFilter: "blur(10px)" }} exit={{ opacity: 0, backdropFilter: "blur(0px)" }} transition={{ duration: 0.2 }} className='fixed inset-0 h-full w-full bg-transparent backdrop-blur-lg z-50 px-4 py-2'>
                     <div className='flex justify-between gap-4'>
-                        <Logo />
+                        <Logo/>
                         <XIcon onClick={() => setOpen(false)} className='absolute right-2 top-2' size={20} />
                     </div>
 

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Container from './Container'
 import Logo from './Logo'
@@ -104,12 +105,12 @@ const Footer = () => {
                 <p className='text-sm text-neutral-600 dark:text-neutral-400 font-display'>&copy; {new Date().getFullYear()} Agenforce AI. All rights reserved.</p>
                 <div className='flex items-center flex-col gap-4'>
                     <div className="flex items-center gap-2">
-                    <Link href="#" className='text-neutral-700 text-sm font-display dark:text-neutral-400 hover:text-black dark:hover:text-neutral-100 transition-colors duration-200 ease-in-out'>Privacy Policy</Link>
-                    <Link href="#" className='text-neutral-700 text-sm font-display dark:text-neutral-400 hover:text-black dark:hover:text-neutral-100 transition-colors duration-200 ease-in-out'>Terms of Service</Link>
+                        <Link href="#" className='text-neutral-700 text-sm font-display dark:text-neutral-400 hover:text-black dark:hover:text-neutral-100 transition-colors duration-200 ease-in-out'>Privacy Policy</Link>
+                        <Link href="#" className='text-neutral-700 text-sm font-display dark:text-neutral-400 hover:text-black dark:hover:text-neutral-100 transition-colors duration-200 ease-in-out'>Terms of Service</Link>
                     </div>
-                <div className="flex">
-                    <ModeToggle/>
-                </div>
+                    <div className="flex">
+                        <ModeToggle />
+                    </div>
                 </div>
             </Container>
 
